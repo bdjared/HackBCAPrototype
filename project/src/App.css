@@ -1,38 +1,83 @@
-.App {
+table tr
+{
+  border: 0;
+}
+
+.card-image img
+{
+    object-fit: cover; /* crops instead of stretches */
+    max-height: 50vh;
+    /* filter: brightness(50%); */
+
+}
+
+.card-image-gradient::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1));
+}
+
+div.event-description {
+  white-space: pre-line;
+}
+
+main h1 {
+  font-weight: bolder;
+  color: lightcyan;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main .col {
+  display: inline;
+  vertical-align: middle;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  background-color: #90caf9 ; /*blue lighten-3*/
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  flex: 1 0 auto
+}
+
+body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh; /* Added to make footer at bottom*/ 
 }
 
-.App-link {
-  color: #61dafb;
+/* Nav bar */
+nav {
+  background-color: #1e88e5;  /*blue darken-1*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav img {
+  height: 3em;
+  vertical-align: middle;
+  margin: 0 .5em;
+}
+
+nav .btn, .sidenav .btn {
+  background-color: #d84315; /*deep-orange darken-3*/
+}
+nav .btn:hover, .sidenav .btn:hover{
+  background-color: #f4511e; /*deep-orange darken-1*/
+}
+
+/* footer */
+.page-footer {
+  background-color: #1e88e5; 
+}
+
+ h1 {
+  color: #1e88e5;  /*blue darken-1*/
+  text-align: center;
+}
+
+table .material-icons {
+  font-size: 1rem
 }
