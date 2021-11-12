@@ -1,4 +1,6 @@
 import './App.css';
+import logo from './bca-logo-transparent.png';
+import bird from './phoenix.png';
 
 function App() {
   return (
@@ -7,7 +9,7 @@ function App() {
       <header>
         <nav>
           <div class="nav-wrapper">
-            <img class="hide-on-small-and-down" src="./images/bca-logo-transparent.png" alt="BCA Logo"></img>
+            <img class="hide-on-small-and-down" src={logo} alt="BCA Logo"></img>
           </div>
         </nav>
         <ul id="mobile-nav" class="sidenav">
@@ -24,7 +26,7 @@ function App() {
 
           <div class="row">
             <div class="col s5">
-              <img class="responsive-img" src="./images/phoenix.png" alt="Blue and Red phoenix silhouette"></img>
+              <img class="responsive-img" src={bird} alt="Blue and Red phoenix silhouette"></img>
             </div>
             <div class="col s7 ">
               <div class="card blue-grey darken-1">
