@@ -9,9 +9,17 @@ function App() {
   <><title>HackBCA 20XX</title><body>
       <header>
         <nav>
-          <div class="nav-wrapper">
-            <img class="hide-on-small-and-down" src={logo} alt="BCA Logo"></img>
-          </div>
+        <div class="nav-wrapper">
+          <img class="hide-on-small-and-down" src={logo} alt="logo"></img>
+          <a href="/" class="brand-logo">HackBCA 20XX</a>
+          <a href="/" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="desktop-nav" class="right hide-on-med-and-down">
+            <li><a href="/events.js"><i class="material-icons left"></i>Events</a></li>
+            <li><a href="/attendees.js"><i class="material-icons left"></i>Attendees</a></li>
+            <li><a href="/index.js"><i class="material-icons left"></i>Projects</a></li>
+            <li><a href="/login.js" class="btn">Login / Register</a></li>
+          </ul>
+      </div>
         </nav>
         <ul id="mobile-nav" class="sidenav">
           <li><a href="/events.html"><i class="material-icons left">event</i>Events</a></li>
@@ -39,13 +47,13 @@ function App() {
 
                 </div>
                 <div class="card-action">
-                  <a href="/events.html">See what's happening (Events)</a>
+                  <a href="/events.js">See what's happening (Events)</a>
                 </div>
                 <div class="card-action">
-                  <a href="/attendees.html">See who's coming (Attendees)</a>
+                  <a href="/attendees.js">See who's coming (Attendees)</a>
                 </div>
                 <div class="card-action">
-                  <a href="/projects.html">See what's being built (Projects)</a>
+                  <a href="/projects.js">See what's being built (Projects)</a>
                 </div>
 
               </div>
@@ -85,11 +93,6 @@ function App() {
           </div>
         </div>
       </footer>
-
-      <script src="/js/materialize.min.js"></script>
-
-      <script> M.AutoInit();</script>
-
     </body></>
   );
 }
