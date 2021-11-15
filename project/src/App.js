@@ -1,7 +1,8 @@
-import './App.css';
+import './styles/main.css';
+import './styles/index.css';
+import "materialize-css/dist/css/materialize.min.css";
 import logo from './bca-logo-transparent.png';
 import bird from './phoenix.png';
-import "materialize-css/dist/css/materialize.min.css";
 
 function App() {
   return (
