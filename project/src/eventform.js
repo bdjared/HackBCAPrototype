@@ -1,77 +1,123 @@
+import ReactDOM from 'react-dom';
+import React from 'react';
 import './styles/main.css';
 import './styles/newevent.css';
 import 'materialize-css/dist/css/materialize.min.css';
-import logo from '/images/bca-logo-transparent.png';
-
+import logo from './images/bca-logo-transparent.png';
+import Events from './Events.js';
+import Attendees from './Attendees.js';
+import Projects from './Projects.js';
+import Login from './Login.js';
+import Event from '@material-ui/icons/Event';
+import People from '@material-ui/icons/People';
+import Build from '@material-ui/icons/Build';
+import Menu from '@material-ui/icons/Menu';
 
 function Eventform() {
-    render(
+
+    function events(){
+        ReactDOM.render(
+          <Events/>,
+          document.getElementById('root')
+        );
+      }
+    
+      function attendees(){
+        ReactDOM.render(
+          <Attendees/>,
+          document.getElementById('root')
+        );
+      }
+    
+      function projects(){
+        ReactDOM.render(
+          <Projects/>,
+          document.getElementById('root')
+        );
+      }
+    
+      function login(){
+        ReactDOM.render(
+          <Login/>,
+          document.getElementById('root')
+        );
+      }
+
+    return(
         <><header>
-            <nav>
-                <div class="nav-wrapper">
-                    <img class="hide-on-small-and-down" src={logo}></img>
-                </div>
-            </nav>
-            <ul id="mobile-nav" class="sidenav">
-                <li><a href="/events.html"><i class="material-icons left">event</i>Events</a></li>
-                <li><a href="/attendees.html"><i class="material-icons left">people</i>Attendees</a></li>
-                <li><a href="/projects.html"><i class="material-icons left">build</i>Projects</a></li>
-                <li><a href="/login.html" class="btn">Login / Register</a></li>
+        <nav>
+          <div class="nav-wrapper">
+            <img class="hide-on-small-and-down" src={logo} alt="logo"></img>
+            <a href="/" class="brand-logo">HackBCA 20XX</a>
+            <a href="/" data-target="mobile-nav" class="sidenav-trigger"><Menu/></a>
+            <ul id="desktop-nav" class="right hide-on-med-and-down">
+                <li><a href='/' onClick={events}><Event/>Events</a></li>
+                <li><a href='/' onClick={attendees}><People/>Attendees</a></li>
+                <li><a href='/' onClick={projects}><Build/>Projects</a></li>
+                <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
             </ul>
-        </header><main>
+          </div>
+        </nav>
+        <ul id="mobile-nav" class="sidenav">
+            <li><a href='/' onClick={events}><Event/>Events</a></li>
+            <li><a href='/' onClick={attendees}><People/>Attendees</a></li>
+            <li><a href='/' onClick={projects}><Build/>Projects</a></li>
+            <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
+        </ul>
+        </header>
+        <main>
+        <form id="create_update_event" method="post" action="/event">
+            <input type="hidden" name="event_id" id="event_id" value="0"></input>
 
-                <form id="create_update_event" method="post" action="/event">
-                    <input type="hidden" name="event_id" id="event_id" value="0"></input>
+        </form>
+        </main>
+        {/* <script>
+            document.addEventListener('DOMContentLoaded', function () { }
+            var elems = document.querySelectorAll('.datepicker');
+            var instances = M.Datepicker.init(elems, {format}: 'mm-dd-yyyy',
+            autoClose: true
+            });
+            });
 
-                </form>
-            </main>
-            {/* <script>
-                document.addEventListener('DOMContentLoaded', function () { }
-                var elems = document.querySelectorAll('.datepicker');
-                var instances = M.Datepicker.init(elems, {format}: 'mm-dd-yyyy',
-                autoClose: true
-                });
-                });
+            document.addEventListener('DOMContentLoaded', function () { }
+            var elems = document.querySelectorAll('.timepicker');
+            var instances = M.Timepicker.init(elems, {defaultTime}: 'now',
+            twelveHour: true,
+            autoClose: false,
+            });
+            });
 
-                document.addEventListener('DOMContentLoaded', function () { }
-                var elems = document.querySelectorAll('.timepicker');
-                var instances = M.Timepicker.init(elems, {defaultTime}: 'now',
-                twelveHour: true,
-                autoClose: false,
-                });
-                });
-
-            </script> */}
-            <footer class="page-footer">
+        </script> */}
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Sponsors</h5>
+                        <p>hackBCA is brought to you by:</p>
+                        <ul>
+                            <li>BCA PPO</li>
+                            <li>Tech-Pa</li>
+                            <li>&lt;Corporate Sponsors&gt;</li>
+                            <li>Wanna join this list? Sponsor us!</li>
+                        </ul>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Contact Us</h5>
+                        <ul>
+                            <li>Twitter: @hackbca</li>
+                            <li>Instagram: @hackbca</li>
+                            <li>Facebook: @hackbca</li>
+                            <li>Email: hackbca@_____</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
                 <div class="container">
-                    <div class="row">
-                        <div class="col l6 s12">
-                            <h5 class="white-text">Sponsors</h5>
-                            <p>hackBCA is brought to you by:</p>
-                            <ul>
-                                <li>BCA PPO</li>
-                                <li>Tech-Pa</li>
-                                <li>&lt;Corporate Sponsors&gt;</li>
-                                <li>Wanna join this list? Sponsor us!</li>
-                            </ul>
-                        </div>
-                        <div class="col l4 offset-l2 s12">
-                            <h5 class="white-text">Contact Us</h5>
-                            <ul>
-                                <li>Twitter: @hackbca</li>
-                                <li>Instagram: @hackbca</li>
-                                <li>Facebook: @hackbca</li>
-                                <li>Email: hackbca@_____</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
                 </div>
-                <div class="footer-copyright">
-                    <div class="container">
-                        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-                    </div>
-                </div>
-            </footer></>
+            </div>
+        </footer></>
     )
 }
 export default Eventform;

@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom';
+import React from 'react';
 import './styles/main.css';
 import './styles/index.css';
 import 'materialize-css/dist/css/materialize.min.css';
@@ -44,7 +45,6 @@ function App() {
   }
 
   return (
-    
     <><title>HackBCA 20XX</title><body>
       <header>
         <nav>
