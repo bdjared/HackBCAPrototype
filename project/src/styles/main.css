@@ -13,7 +13,7 @@ body {
 }
 
 /* Nav bar */
-nav {
+nav .nav-wrapper {
     background-color: #1e88e5;  /*blue darken-1*/
 }
 nav img {
@@ -30,7 +30,7 @@ nav .btn:hover, .sidenav .btn:hover{
 }
 
 /* footer */
-.page-footer {
+footer.page-footer {
     background-color: #1e88e5; 
 }
 

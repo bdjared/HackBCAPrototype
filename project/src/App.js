@@ -1,13 +1,46 @@
+import ReactDOM from 'react-dom';
 import './styles/main.css';
 import './styles/index.css';
 import "materialize-css/dist/css/materialize.min.css";
 import logo from './images/bca-logo-transparent.png';
 import bird from './images/phoenix.png';
+import Events from './Events.js';
+import Attendees from './Attendees.js';
+import Projects from './Projects.js';
+import Login from './Login.js';
 
 function App() {
-  return (
+  
+  function events(){
+    ReactDOM.render(
+      <Events/>,
+      document.getElementById('root')
+    );
+  }
 
-  <><title>HackBCA 20XX</title><body>
+  function attendees(){
+    ReactDOM.render(
+      <Attendees/>,
+      document.getElementById('root')
+    );
+  }
+
+  function projects(){
+    ReactDOM.render(
+      <Projects/>,
+      document.getElementById('root')
+    );
+  }
+
+  function login(){
+    ReactDOM.render(
+      <Login/>,
+      document.getElementById('root')
+    );
+  }
+
+  return (
+    <><title>HackBCA 20XX</title><body>
       <header>
         <nav>
           <div class="nav-wrapper">
@@ -15,18 +48,18 @@ function App() {
             <a href="/" class="brand-logo">HackBCA 20XX</a>
             <a href="/" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="desktop-nav" class="right hide-on-med-and-down">
-              <li><a href="/Events.js"><i class="material-icons left"></i>Events</a></li>
-              <li><a href="/Attendees.js"><i class="material-icons left"></i>Attendees</a></li>
-              <li><a href="/Projects.js"><i class="material-icons left"></i>Projects</a></li>
-              <li><a href="/Login.js" class="btn">Login / Register</a></li>
+              <li><a href='/' onClick={events}><i class="material-icons left"></i>Events</a></li>
+              <li><a href='/' onClick={attendees}><i class="material-icons left"></i>Attendees</a></li>
+              <li><a href='/' onClick={projects}><i class="material-icons left"></i>Projects</a></li>
+              <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
             </ul>
           </div>
         </nav>
         <ul id="mobile-nav" class="sidenav">
-          <li><a href="/Events.js"><i class="material-icons left">event</i>Events</a></li>
-          <li><a href="/Attendees.js"><i class="material-icons left">people</i>Attendees</a></li>
-          <li><a href="/Projects.js"><i class="material-icons left">build</i>Projects</a></li>
-          <li><a href="/Login.js" class="btn">Login / Register</a></li>
+          <li><a href='/' onClick={events}><i class="material-icons left">event</i>Events</a></li>
+          <li><a href='/' onClick={attendees}><i class="material-icons left">people</i>Attendees</a></li>
+          <li><a href='/' onClick={projects}><i class="material-icons left">build</i>Projects</a></li>
+          <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
         </ul>
       </header>
 
@@ -48,13 +81,13 @@ function App() {
 
                 </div>
                 <div class="card-action">
-                  <a href="/Events.js">See what's happening (Events)</a>
+                  <a href='/' onClick={events}>See what's happening (Events)</a>
                 </div>
                 <div class="card-action">
-                  <a href="/Attendees.js">See who's coming (Attendees)</a>
+                  <a href='/' onClick={attendees}>See who's coming (Attendees)</a>
                 </div>
                 <div class="card-action">
-                  <a href="/Projects.js">See what's being built (Projects)</a>
+                  <a href='/' onClick={projects}>See what's being built (Projects)</a>
                 </div>
 
               </div>

@@ -1,7 +1,7 @@
 import './styles/main.css';
 import './styles/tables.css';
 import 'materialize-css/dist/css/materialize.min.css';
-import logo from './bca-logo-transparent.png';
+import logo from './images/bca-logo-transparent.png';
 
 function Events() {
     return(
@@ -59,11 +59,11 @@ function Events() {
                     <tbody>
                         <tr>
                             <td>
-                                <a onclick='toggleInterest(this, "{{ event_id }}")'
+                                <a href='/' onClick='toggleInterest(this, "{{ event_id }}")'
                                     class="btn-floating btn-small waves-effect waves-light scale-transition scale-in blue"><i
                                         class="material-icons">star_border</i></a>
                             </td>
-                            <td class="blue-text clickable" onclick="location.href='/events/1.html'">Opening Ceremony</td>
+                            <td class="blue-text clickable" onClick="location.href='/events/1.html'">Opening Ceremony</td>
                             <td> <a href='?filter=location:Auditorium'>Auditorium </a></td>
                             <td><a href='?filter=date:05-01-2022'>May 1 (Sat)</a> 10:30 AM</td>
                             <td>30m</td>
@@ -72,19 +72,19 @@ function Events() {
                             <td nowrap>
                                 <a class="btn-floating btn-small waves-effect waves-light green lighten-1" href="/eventform.html"><i
                                     class="material-icons">edit</i></a>
-                                <a class="btn-floating waves-effect waves-light red"
-                                    onclick='confirmDelete("Opening Ceremony","{{ event_id}}", ".")'><i
+                                <a href='/' class="btn-floating waves-effect waves-light red"
+                                    onClick='confirmDelete("Opening Ceremony","{{ event_id}}", ".")'><i
                                         class="material-icons">delete</i></a>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a onclick='toggleInterest(this, "{{ event_id }}")'
+                                <a href='/' onClick='toggleInterest(this, "{{ event_id }}")'
                                     class="btn-floating btn-small waves-effect waves-light scale-transition scale-in blue"><i
                                         class="material-icons">star_border</i></a>
                             </td>
-                            <td class="blue-text clickable" onclick="location.href='/events/2.html'">Closing Awards Ceremony</td>
+                            <td class="blue-text clickable" onClick="location.href='/events/2.html'">Closing Awards Ceremony</td>
                             <td> <a href='?filter=location:Auditorium'>Auditorium </a></td>
                             <td><a href='?filter=date:05-02-2021'>May 2 (Sun)</a> 11:00 AM</td>
                             <td>30m</td>
@@ -93,8 +93,8 @@ function Events() {
                             <td nowrap>
                                 <a class="btn-floating btn-small waves-effect waves-light green lighten-1" href="./eventform.html"><i
                                     class="material-icons">edit</i></a>
-                                <a class="btn-floating waves-effect waves-light red"
-                                    onclick='confirmDelete("Opening Ceremony","{{ event_id}}")'><i class="material-icons">delete</i></a>
+                                <a href='/' class="btn-floating waves-effect waves-light red"
+                                    onClick='confirmDelete("Opening Ceremony","{{ event_id}}")'><i class="material-icons">delete</i></a>
 
                             </td>
 
