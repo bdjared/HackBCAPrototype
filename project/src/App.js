@@ -53,17 +53,17 @@ function App() {
             <a href="/" class="brand-logo">HackBCA 20XX</a>
             <a href="/" data-target="mobile-nav" class="sidenav-trigger"><Menu/></a>
             <ul id="desktop-nav" class="right hide-on-med-and-down">
-              <li><a href='/' onClick={events}><Event/>Events</a></li>
-              <li><a href='/' onClick={attendees}><People/>Attendees</a></li>
-              <li><a href='/' onClick={projects}><Build/>Projects</a></li>
+              <li onClick={events}><Event/>Events</li>
+              <li onClick={attendees}><People/>Attendees</li>
+              <li onClick={projects}><Build/>Projects</li>
               <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
             </ul>
           </div>
         </nav>
         <ul id="mobile-nav" class="sidenav">
-          <li><a href='/' onClick={events}><Event/>Events</a></li>
-          <li><a href='/' onClick={attendees}><People/>Attendees</a></li>
-          <li><a href='/' onClick={projects}><Build/>Projects</a></li>
+          <li onClick={events}><Event/>Events</li>
+          <li onClick={attendees}><People/>Attendees</li>
+          <li onClick={projects}><Build/>Projects</li>
           <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
         </ul>
       </header>
@@ -86,13 +86,13 @@ function App() {
 
                 </div>
                 <div class="card-action">
-                  <a href='/' onClick={events}>See what's happening (Events)</a>
+                  <li href='/' onClick={events}>See what's happening (Events)</li>
                 </div>
                 <div class="card-action">
-                  <a href='/' onClick={attendees}>See who's coming (Attendees)</a>
+                  <li href='/' onClick={attendees}>See who's coming (Attendees)</li>
                 </div>
                 <div class="card-action">
-                  <a href='/' onClick={projects}>See what's being built (Projects)</a>
+                  <li href='/' onClick={projects}>See what's being built (Projects)</li>
                 </div>
 
               </div>

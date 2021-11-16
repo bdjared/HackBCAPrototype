@@ -59,25 +59,25 @@ function Events() {
 
     return(
         <><header>
-        <nav>
-          <div class="nav-wrapper">
-            <img class="hide-on-small-and-down" src={logo} alt="logo"></img>
-            <a href="/" class="brand-logo">HackBCA 20XX</a>
-            <a href="/" data-target="mobile-nav" class="sidenav-trigger"><Menu/></a>
-            <ul id="desktop-nav" class="right hide-on-med-and-down">
-                <li><a href='/' onClick={events}><Event/>Events</a></li>
-                <li><a href='/' onClick={attendees}><People/>Attendees</a></li>
-                <li><a href='/' onClick={projects}><Build/>Projects</a></li>
+            <nav>
+            <div class="nav-wrapper">
+                <img class="hide-on-small-and-down" src={logo} alt="logo"></img>
+                <a href="/" class="brand-logo">HackBCA 20XX</a>
+                <a href="/" data-target="mobile-nav" class="sidenav-trigger"><Menu/></a>
+                <ul id="desktop-nav" class="right hide-on-med-and-down">
+                <li onClick={events}><Event/>Events</li>
+                <li onClick={attendees}><People/>Attendees</li>
+                <li onClick={projects}><Build/>Projects</li>
                 <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
-            </ul>
-          </div>
-        </nav>
-        <ul id="mobile-nav" class="sidenav">
-            <li><a href='/' onClick={events}><Event/>Events</a></li>
-            <li><a href='/' onClick={attendees}><People/>Attendees</a></li>
-            <li><a href='/' onClick={projects}><Build/>Projects</a></li>
+                </ul>
+            </div>
+            </nav>
+            <ul id="mobile-nav" class="sidenav">
+            <li onClick={events}><Event/>Events</li>
+            <li onClick={attendees}><People/>Attendees</li>
+            <li onClick={projects}><Build/>Projects</li>
             <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
-        </ul>
+            </ul>
         </header>
         <div class="container">
             <h1>Event Schedule</h1>
