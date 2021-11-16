@@ -3,6 +3,7 @@ import React from 'react';
 import './styles/main.css';
 import './styles/newevent.css';
 import 'materialize-css/dist/css/materialize.min.css';
+import { Container, DatePicker, TimePicker} from "react-materialize";
 import logo from './images/bca-logo-transparent.png';
 import Events from './Events.js';
 import Attendees from './Attendees.js';
@@ -20,28 +21,28 @@ function Eventform() {
           <Events/>,
           document.getElementById('root')
         );
-      }
+    }
     
-      function attendees(){
+    function attendees(){
         ReactDOM.render(
           <Attendees/>,
           document.getElementById('root')
         );
-      }
+    }
     
-      function projects(){
+    function projects(){
         ReactDOM.render(
           <Projects/>,
           document.getElementById('root')
         );
-      }
+    }
     
-      function login(){
+    function login(){
         ReactDOM.render(
           <Login/>,
           document.getElementById('root')
         );
-      }
+    }
 
     return(
         <><header>
@@ -71,23 +72,15 @@ function Eventform() {
 
         </form>
         </main>
-        {/* <script>
-            document.addEventListener('DOMContentLoaded', function () { }
-            var elems = document.querySelectorAll('.datepicker');
-            var instances = M.Datepicker.init(elems, {format}: 'mm-dd-yyyy',
-            autoClose: true
-            });
-            });
 
-            document.addEventListener('DOMContentLoaded', function () { }
-            var elems = document.querySelectorAll('.timepicker');
-            var instances = M.Timepicker.init(elems, {defaultTime}: 'now',
-            twelveHour: true,
-            autoClose: false,
-            });
-            });
+        <Container>
+            <DatePicker format='mm-dd-yyyy' autoClose={true}/>
+        </Container>
 
-        </script> */}
+        <Container>
+            <TimePicker defaultTime='now' twelveHour={true} autoClose={false}/>
+        </Container>
+
         <footer class="page-footer">
             <div class="container">
                 <div class="row">
