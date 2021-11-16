@@ -3,7 +3,7 @@ import './styles/tables.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import logo from './bca-logo-transparent.png';
 
-function events() {
+function Events() {
     return(
         <><header>
             <nav>
@@ -139,4 +139,4 @@ function events() {
     );
 }
 
-export default events;
+export default Events;
