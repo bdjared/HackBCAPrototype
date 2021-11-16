@@ -1,13 +1,17 @@
 import ReactDOM from 'react-dom';
 import './styles/main.css';
 import './styles/index.css';
-import "materialize-css/dist/css/materialize.min.css";
+import 'materialize-css/dist/css/materialize.min.css';
 import logo from './images/bca-logo-transparent.png';
 import bird from './images/phoenix.png';
 import Events from './Events.js';
 import Attendees from './Attendees.js';
 import Projects from './Projects.js';
 import Login from './Login.js';
+import Event from '@material-ui/icons/Event';
+import People from '@material-ui/icons/People';
+import Build from '@material-ui/icons/Build';
+import Menu from '@material-ui/icons/Menu';
 
 function App() {
   
@@ -40,25 +44,26 @@ function App() {
   }
 
   return (
+    
     <><title>HackBCA 20XX</title><body>
       <header>
         <nav>
           <div class="nav-wrapper">
             <img class="hide-on-small-and-down" src={logo} alt="logo"></img>
             <a href="/" class="brand-logo">HackBCA 20XX</a>
-            <a href="/" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="/" data-target="mobile-nav" class="sidenav-trigger"><Menu/></a>
             <ul id="desktop-nav" class="right hide-on-med-and-down">
-              <li><a href='/' onClick={events}><i class="material-icons left"></i>Events</a></li>
-              <li><a href='/' onClick={attendees}><i class="material-icons left"></i>Attendees</a></li>
-              <li><a href='/' onClick={projects}><i class="material-icons left"></i>Projects</a></li>
+              <li><a href='/' onClick={events}><Event/>Events</a></li>
+              <li><a href='/' onClick={attendees}><People/>Attendees</a></li>
+              <li><a href='/' onClick={projects}><Build/>Projects</a></li>
               <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
             </ul>
           </div>
         </nav>
         <ul id="mobile-nav" class="sidenav">
-          <li><a href='/' onClick={events}><i class="material-icons left">event</i>Events</a></li>
-          <li><a href='/' onClick={attendees}><i class="material-icons left">people</i>Attendees</a></li>
-          <li><a href='/' onClick={projects}><i class="material-icons left">build</i>Projects</a></li>
+          <li><a href='/' onClick={events}><Event/>Events</a></li>
+          <li><a href='/' onClick={attendees}><People/>Attendees</a></li>
+          <li><a href='/' onClick={projects}><Build/>Projects</a></li>
           <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
         </ul>
       </header>
