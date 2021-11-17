@@ -29,14 +29,18 @@ nav .btn:hover, .sidenav .btn:hover{
     background-color: #f4511e; /*deep-orange darken-1*/
 }
 
-footer.projects {
-    position:absolute;
-    bottom:0;
-    width: 100%;
-}
 
 /* footer */
 footer.page-footer {
     background-color: #1e88e5; 
+}
+
+button.info{
+    background-color:  #90caf9;
+    border: transparent;
+}
+
+button.info:hover{
+    background-color: #1e88e5;
 }
 
