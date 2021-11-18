@@ -4,7 +4,7 @@ import './styles/main.css';
 import './styles/index.css';
 import Projectinfo1 from './Projectinfo1';
 import ProjectInfo2 from './ProjectInfo2';
-
+import { Container } from './Container';
 import 'materialize-css/dist/css/materialize.min.css';
 import Sort from '@material-ui/icons/Sort';
 import FilterList from '@material-ui/icons/FilterList';
@@ -13,9 +13,16 @@ import Create from '@material-ui/icons/Create';
 import Delete from '@material-ui/icons/Delete';
 import StarBorder from '@material-ui/icons/StarBorder';
 import Edit from '@material-ui/icons/Edit';
-
+let projectList = [];
 
 const ProjectBody = () => {
+
+    const addProject = (event) => {
+        event.preventDefault(event);
+        // TODO: Add dateAdded as new Date() rather than just plain text. Alternatively, could just check what they are entering matches a specific criteria (XX-XX-XXXX)
+        projectList.push({projectName:event.target.projectName.value, teamName:event.target.teamName.value, dateAdded:event.target.dateAdded.value, type:event.target.type.value,moreInfo:event.target.moreInfo.value});
+        this.forceUpdate();
+    }
 
     function openProjectInfo1(){
         ReactDOM.render(
@@ -50,6 +57,22 @@ const ProjectBody = () => {
                 </div>
             </div>
             <table class="highlight centered responsive-table">
+                <tr>
+                    <th>Project Name</th>
+                    <th>Team Name</th>
+                    <th>Date Proposed</th>
+                    <th>Type</th>
+                    <th>More Info</th>
+                </tr>
+                {projectList.map((project =>
+                <tr>
+                    <th>{project.projectName}</th>
+                    <th>{project.teamName}</th>
+                    <th>{project.dateAdded}</th>
+                    <th>{project.type}</th>
+                    <th>{project.moreInfo}</th>
+                    </tr>
+                    ))}
                 <thead>
                     <tr>
                         <th><Star/>
@@ -107,6 +130,7 @@ const ProjectBody = () => {
                     </tr>
                 </tbody>
             </table>
+            <Container triggerText={"Add Project"} onSubmit={addProject}/>
         </div>
         </body>
      );
