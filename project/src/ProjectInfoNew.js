@@ -5,16 +5,16 @@ import './styles/main.css';
 import './styles/index.css';
 import 'materialize-css/dist/css/materialize.min.css';
 
-const ProjectInfoNew = (name, team, info) => {
+const ProjectInfoNew = (props) => {
     return ( 
         <div>
         <Navbar/>
         <body>
-            <h1>{name}</h1>
-            <h5>{team}</h5>
+            <h1>{props.name}</h1>
+            <h5>By:{props.team}</h5>
             <h2></h2>
             <h6>Description:</h6>
-            <p>{info}</p>
+            <p>{props.info}</p>
         </body>
         <BottomFooter/>
         </div>
