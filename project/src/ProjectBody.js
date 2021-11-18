@@ -3,6 +3,7 @@ import React from 'react';
 import './styles/main.css';
 import './styles/index.css';
 import Projectinfo1 from './Projectinfo1';
+import ProjectInfo2 from './ProjectInfo2';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import Sort from '@material-ui/icons/Sort';
@@ -19,6 +20,13 @@ const ProjectBody = () => {
     function openProjectInfo1(){
         ReactDOM.render(
           <Projectinfo1/>,
+          document.getElementById('root')
+        );
+      }
+
+      function openProjectInfo2(){
+        ReactDOM.render(
+          <ProjectInfo2/>,
           document.getElementById('root')
         );
       }
@@ -89,7 +97,7 @@ const ProjectBody = () => {
                         <td> <a href='?filter=location:Auditorium'>Auditorium </a></td>
                         <td><a href='?filter=date:05-02-2021'>May 2 (Sun)</a></td>
                         <td>Website</td>
-                        <td> <a href='?filter=type:Main'>Main</a></td>
+                        <td> <button class="info" onClick={openProjectInfo2}>???</button></td>
                         
                         <td nowrap>
                             <a class="btn-floating btn-small waves-effect waves-light green lighten-1" href="./eventform.html"><Edit/></a>
