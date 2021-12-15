@@ -16,6 +16,10 @@ import Menu from '@material-ui/icons/Menu';
 
 function App() {
   
+  fetch('http://localhost:3001/users')
+  .then(response => response.text())
+  .then(data => console.log({data}));
+
   function events(){
     ReactDOM.render(
       <Events/>,
