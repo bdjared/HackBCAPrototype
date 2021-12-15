@@ -11,7 +11,7 @@ const ProjectInfoNew = (props) => {
         <Navbar/>
         <body>
             <h1>{props.name}</h1>
-            <h5>By: {props.team}</h5>
+            <h5>By:{props.team}</h5>
             <h2></h2>
             <h6>Description:</h6>
             <p>{props.info}</p>
