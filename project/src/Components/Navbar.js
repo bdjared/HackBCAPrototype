@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/main.css';
-import './styles/index.css';
+import '../styles/main.css';
+import '../styles/index.css';
 import 'materialize-css/dist/css/materialize.min.css';
-import logo from './images/bca-logo-transparent.png';
-import bird from './images/phoenix.png';
-import Events from './Events.js';
-import Attendees from './Attendees.js';
-import Projects from './Projects.js';
-import Login from './Login.js';
+import logo from '../images/bca-logo-transparent.png';
+import bird from '../images/phoenix.png';
+import Events from '../Events.js';
+import Attendees from '../Attendees.js';
+import Projects from '../Projects.js';
+import Login from '../Login.js';
 import Event from '@material-ui/icons/Event';
 import People from '@material-ui/icons/People';
 import Build from '@material-ui/icons/Build';
 import Menu from '@material-ui/icons/Menu';
+import { Link , Router, Route} from 'react-router-dom';
 
 
 
@@ -49,23 +50,25 @@ const Navbar = () => {
     return (
         <header>
         <nav>
-          <div class="nav-wrapper">
+          {/* <div class="nav-wrapper">
             <img class="hide-on-small-and-down" src={logo} alt="logo"></img>
             <a href="/" class="brand-logo">HackBCA 20XX</a>
             <a href="/" data-target="mobile-nav" class="sidenav-trigger"><Menu/></a>
             <ul id="desktop-nav" class="right hide-on-med-and-down">
-              <li onClick={events}><Event/>Events</li>
-              <li onClick={attendees}><People/>Attendees</li>
-              <li onClick={projects}><Build/>Projects</li>
+              <Router>
+              <Link to="/events"><Event/>Events</Link>
+              <Link to="/attendees"><People/>Attendees</Link>
+              <Link to="/projects"><Build/>Projects</Link>
+              </Router>
               <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
             </ul>
-          </div>
+          </div> */}
         </nav>
         <ul id="mobile-nav" class="sidenav">
           <li onClick={events}><Event/>Events</li>
           <li onClick={attendees}><People/>Attendees</li>
           <li onClick={projects}><Build/>Projects</li>
-          <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
+          {/* <li><a href='/' onClick={login} class="btn">Login / Register</a></li> */}
         </ul>
       </header>
 

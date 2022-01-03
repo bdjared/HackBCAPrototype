@@ -13,12 +13,14 @@ import Event from '@material-ui/icons/Event';
 import People from '@material-ui/icons/People';
 import Build from '@material-ui/icons/Build';
 import Menu from '@material-ui/icons/Menu';
+import Navbar2 from './Components/Navbar2';
 
 function App() {
   
   fetch('/users')
   .then(response => response.text())
   .then(data => console.log({data}));
+  
   function events(){
     ReactDOM.render(
       <Events/>,
@@ -50,7 +52,7 @@ function App() {
   return (
     <><title>HackBCA 20XX</title><body>
       <header>
-        <nav>
+        {/* <nav>
           <div class="nav-wrapper">
             <img class="hide-on-small-and-down" src={logo} alt="logo"></img>
             <a href="/" class="brand-logo">HackBCA 20XX</a>
@@ -68,7 +70,8 @@ function App() {
           <li onClick={attendees}><People/>Attendees</li>
           <li onClick={projects}><Build/>Projects</li>
           <li><a href='/' onClick={login} class="btn">Login / Register</a></li>
-        </ul>
+        </ul> */}
+        <Navbar2/>
       </header>
 
       <main>

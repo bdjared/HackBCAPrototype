@@ -1,6 +1,6 @@
 import React from 'react';
 import BottomFooter from './BottomFooter';
-import Navbar from './Navbar';
+import Navbar from './Components/Navbar';
 import './styles/main.css';
 import './styles/index.css';
 import 'materialize-css/dist/css/materialize.min.css';

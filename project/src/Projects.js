@@ -4,15 +4,15 @@ import './styles/main.css';
 import './styles/index.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import BottomFooter from './BottomFooter';
-import Navbar from './Navbar';
+import Navbar2 from './Components/Navbar2';
 import ProjectBody from './ProjectBody';
 
 function Projects() {
     return(
         <div>
-        <Navbar/>
-        <ProjectBody/>
-        <BottomFooter/>
+        <Navbar2/>
+        {/* <ProjectBody/>
+        <BottomFooter/> */}
         </div>
     );
 }
